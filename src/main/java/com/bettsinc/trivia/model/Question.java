@@ -5,13 +5,13 @@ import java.util.List;
 public class Question {
 
     private String question;
-    private String rating;
+    private Integer points;
     private String correctAnswer;
     private List<String> incorrectAnswers;
 
-    public Question(String question, String rating, String correctAnswer, List<String> incorrectAnswers) {
+    public Question(String question, Integer points, String correctAnswer, List<String> incorrectAnswers) {
         this.question = question;
-        this.rating = rating;
+        this.points = points;
         this.correctAnswer = correctAnswer;
         this.incorrectAnswers = incorrectAnswers;
     }
@@ -27,12 +27,12 @@ public class Question {
         this.question = question;
     }
 
-    public String getRating() {
-        return rating;
+    public Integer getPoints() {
+        return points;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
+    public void setPoints(Integer points) {
+        this.points = points;
     }
 
     public String getCorrectAnswer() {

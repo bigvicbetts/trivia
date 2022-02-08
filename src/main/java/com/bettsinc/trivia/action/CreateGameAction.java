@@ -16,7 +16,7 @@ public class CreateGameAction extends ActionSupport {
 
     @Override
     public String execute() throws Exception {
-        Game game = gameService.createGame(1, 2);
+        Game game = gameService.createGame(1);
          return SUCCESS;
     }
 

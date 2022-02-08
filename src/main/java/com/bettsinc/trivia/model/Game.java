@@ -20,4 +20,8 @@ public class Game {
     public void setCategories(List<Category> categories) {
         this.categories = categories;
     }
+
+    public void addCategory(Category category) {
+        this.categories.add(category);
+    }
 }

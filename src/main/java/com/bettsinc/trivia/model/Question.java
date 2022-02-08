@@ -1,19 +1,20 @@
 package com.bettsinc.trivia.model;
 
 import java.util.List;
+import java.util.Map;
 
 public class Question {
 
     private String question;
     private Integer points;
-    private String correctAnswer;
-    private List<String> incorrectAnswers;
+    private List<String> possibleAnswers;
+    private Map<String, Boolean> answerValidityMap;
 
-    public Question(String question, Integer points, String correctAnswer, List<String> incorrectAnswers) {
+    public Question(String question, Integer points, List<String> possibleAnswers, Map<String, Boolean> answerValidityMap) {
         this.question = question;
         this.points = points;
-        this.correctAnswer = correctAnswer;
-        this.incorrectAnswers = incorrectAnswers;
+        this.possibleAnswers = possibleAnswers;
+        this.answerValidityMap = answerValidityMap;
     }
 
     public Question() {
@@ -35,19 +36,19 @@ public class Question {
         this.points = points;
     }
 
-    public String getCorrectAnswer() {
-        return correctAnswer;
+    public List<String> getPossibleAnswers() {
+        return possibleAnswers;
     }
 
-    public void setCorrectAnswer(String correctAnswer) {
-        this.correctAnswer = correctAnswer;
+    public void setPossibleAnswers(List<String> possibleAnswers) {
+        this.possibleAnswers = possibleAnswers;
     }
 
-    public List<String> getIncorrectAnswers() {
-        return incorrectAnswers;
+    public Map<String, Boolean> getAnswerValidityMap() {
+        return answerValidityMap;
     }
 
-    public void setIncorrectAnswers(List<String> incorrectAnswers) {
-        this.incorrectAnswers = incorrectAnswers;
+    public void setAnswerValidityMap(Map<String, Boolean> answerValidityMap) {
+        this.answerValidityMap = answerValidityMap;
     }
 }
